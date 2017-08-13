@@ -1,6 +1,6 @@
 
 package pruebacal;
-//hola
+
 import com.sun.glass.events.KeyEvent;
 import java.awt.AWTException;
 import java.util.Scanner;
