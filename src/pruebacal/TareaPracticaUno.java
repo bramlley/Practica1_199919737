@@ -5,47 +5,36 @@ import com.sun.glass.events.KeyEvent;
 import java.awt.AWTException;
 import java.util.Scanner;
 import java.awt.Robot;
+
 public class TareaPracticaUno {
+    PresentaciónDeIngreso ir = new PresentaciónDeIngreso();
+    Menu2 ver = new Menu2();
     
-       Menu2 ir = new Menu2();
-       
-    public void enter() throws AWTException{
-          Scanner entrada = new Scanner(System.in);
-             boolean salir = false;
-        int opcion = 0;
-        while(!salir){
-            
-     System.out.println("1.opcion");
-     System.out.println("2.opcion");
-   opcion = entrada.nextInt();
-            switch(opcion){
-                case 1:
-                System.out.println("Nombre");
-                System.out.println("Carné");
-                System.out.println("IPC"+"'A'"+"Practica1");
-                System.out.println("BUSCAMINAS!!!!");
-                 System.out.println();
-                 
-               ClaseEventos presione = new ClaseEventos();
-             
-               
-                 break;
-                 
-                case 2: 
-                   ir.menu2();
-                    break;
-                case 3: 
-                    salir = true;
-                    break;
-            
-            }//fin del case
-        }//fin del while
+    Scanner teclado = new Scanner(System.in);
     
-    }
-    public static void main(String[] args) throws AWTException{
-        TareaPracticaUno ir = new TareaPracticaUno();
-        ir.enter();
- 
+    public void menuPresentacion(){
+    int opciòn = 0;
+    boolean salir = false;
+    while(!salir){
+        System.out.println("1. Menu Presentacion");
+        System.out.println("2. Menu2");
+        opciòn = teclado.nextInt();
+        
+        switch(opciòn){
+            case 1:
+                ir.inicio();
+                break;
+            case 2:
+                ver.menu2();
+                break;
+        }//fin del switch
+        
+    }//fin del while
+}//fin del método menuPresentaci+on
+ public static void main(String[] args){
+    TareaPracticaUno entrar = new TareaPracticaUno();
+    entrar.menuPresentacion();
+        
  }//fin del método mai
 }//fin de la clase TareaPracticaUno
 
